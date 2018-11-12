@@ -37,6 +37,18 @@ class AppRoot extends Component {
       {input: [32, 53, 165], output: [0]},
       {input: [25, 36, 310], output: [0]},
       {input: [21, 23, 380], output: [0]},
+      {input: [-17, 25, 6], output: [1]},
+      {input: [-20, 35, 5], output: [1]},
+      {input: [-45, 65, 3], output: [1]},
+      {input: [-34, 54, 6], output: [1]},
+      {input: [-25, 36, 7], output: [1]},
+      {input: [19, 78, 7], output: [1]},
+      {input: [15, 23, 8], output: [0]},
+      {input: [13, 37, 9], output: [0]},
+      {input: [34, 64, 2], output: [0]},
+      {input: [32, 53, 4], output: [0]},
+      {input: [25, 36, 3], output: [0]},
+      {input: [21, 23, 2], output: [0]},
     ]);
 
     // const output = net.run([-15, -18, 115]) // Expect 1 (Stock price will increase);
@@ -52,7 +64,7 @@ class AppRoot extends Component {
         <div>Sample Training Stock Input Data{JSON.stringify(sampleTrainingStockData)}</div>
         <div>Sample Training Stock Output Data {JSON.stringify(sampleTrainingStockDataOutput)}</div>
         <button onClick={this.predictStockPriceMovement.bind(this, [-15, -18, 115])}>Predict Stock 1 (expect 1 - up)</button>
-        <button onClick={this.predictStockPriceMovement.bind(this, [35, 45, 250])}>Predict Stock 2 (expect 0 - down)</button>
+        <button onClick={this.predictStockPriceMovement.bind(this, [5, 13, 7])}>Predict Stock 2 (expect 0 - down)</button>
         <div>Test stock result: {this.state.output}</div>
       </div>
     )
